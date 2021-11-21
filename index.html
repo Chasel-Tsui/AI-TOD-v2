@@ -140,9 +140,9 @@
 					To address the aforementioned problems, we attempt to push forward the development of TOD in aerial images both from the aspect of method and data. Specifically, we propose a new metric dubbed Normalized Wasserstein Distance (NWD) and combine it with a customized RanKing-based training sample Assignment (RKA) strategy, simultaneously alleviating the above three drawbacks of IoU threshold based assignment. Moreover, we convene experts to meticulously relabel our preliminary TOD dataset AI-TOD and release AI-TOD-v2 along with its corrseponding benchmarks.
 					Our contributions are three-folds:
 					<ul style="font-weight:normal; text-align:justify;">
-							<li> We propose NWD-RKA as a better training sample assignment strategy for tiny objects, which can simultaneously alleviate the three drawbacks of IoU threshold based strategy (i.e., severe pos/neg sample imbalance for tiny objects, scale-sample imbalance and failure of sample-compensation. </li>
+							<li> We propose NWD-RKA as a better training sample assignment strategy for tiny objects, which can simultaneously alleviate the three drawbacks of IoU threshold based strategy (i.e., severe pos/neg sample imbalance for tiny objects, scale-sample imbalance and failure of sample-compensation). </li>
 							<li> We optimize AI-TOD and release AI-TOD-v2, where the label noise problem is greatly mitigated. Besides, we establish a comprehensive benchmark by several baseline detectors. The training/validation images and annotations will be made public. </li>
-							<li> Our proposed NWD-RKA can be applied to all kinds of anchor-based detectors and boost their performance on tiny objects. On AI-TOD-v2 dataset, we achieve the performance of 24.7% AP and 57.2% AP0.5, which is highly above the state-of-the-art competitors. Moreover, significant improvements can be seen on AI-TOD, VisDrone2019 and DOTA-v2.0 dataset.</li>							
+							<li> Our proposed NWD-RKA can be applied to all kinds of anchor-based detectors and boost their performance on tiny objects. On AI-TOD-v2 dataset, we achieve the performance of 24.7% AP and 57.2% AP0.5, which is highly above the state-of-the-art competitors. Moreover, significant improvements can be seen on AI-TOD, VisDrone2019 [2] and DOTA-v2.0 [3] dataset.</li>							
 					</ul>
 
 				</p>
@@ -178,7 +178,7 @@
 		  <img class="center" src="images/mean.PNG" width="500" /> <br>
 		  <p class="image-caption">
 			Table 1. Mean and standard deviation of object scale on different
-			datasets [2].
+			datasets.
 		  </p>				
 		  </div>
 		</td>
@@ -230,6 +230,12 @@
 							[<a href="https://ieeexplore.ieee.org/abstract/document/9413340" style="color: #0088CC">paper</a>]<br>
 								J. Wang, W. Yang, H. Guo, R. Zhang, G.-S. Xia <br>
 								IEEE Conference on Pattern Recognition (<b>ICPR</b>), 2021.
+						</li>
+						<li>
+							<b>VisDrone-DET2019: The Vision Meets Drone Object Detection in Image Challenge Results </b>
+							[<a href="https://arxiv.org/abs/2102.12219" style="color: #0088CC">paper</a>]<br>
+							   Du. D, Zhu. P, Wen. L, et al. <br>
+							   IEEE Conference on Computer Vision and Pattern Recognition Workshops (<b>CVPRW</b>), 2019.
 						</li>	
 						<li>
 							<b>Object Detection in Aerial Images: A Large-scale Benchmark and Challenges </b>
@@ -242,13 +248,13 @@
 								<b>Dot Distance for Tiny Object Detection in Aerial Images</b>
 								[<a href="https://openaccess.thecvf.com/content/CVPR2021W/EarthVision/html/Xu_Dot_Distance_for_Tiny_Object_Detection_in_Aerial_Images_CVPRW_2021_paper.html" style="color: #0088CC">paper</a>]<br>
 								C. Xu, J. Wang, W. Yang, L, Yu <br>
-								IEEE Conference on Computer Vision and Pattern Recognition Workshops(<b>CVPRW</b>), 2021.
+								IEEE Conference on Computer Vision and Pattern Recognition Workshops (<b>CVPRW</b>), 2021.
 						</li>	
 
 						<li>
 								<b>A Normalized Gaussian Wasserstein Distance for Tiny Object Detection</b>
 								[<a href="https://arxiv.org/abs/2110.13389" style="color: #0088CC">paper</a>]<br>
-								J. Wang, C. Xu, W. Yang, L, Yu <br>
+								J. Wang, C. Xu, W. Yang, L. Yu <br>
 							    <b>arXiv</b>, 2021.
 						</li>	
 
