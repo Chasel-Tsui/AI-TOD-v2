@@ -1,230 +1,278 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>docsify</title>
-    <link rel="icon" href="_media/favicon.ico" />
-    <meta
-      name="google-site-verification"
-      content="6t0LoIeFksrjF4c9sqUEsVXiQNxLp2hgoqo0KryT-sE"
-    />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta
-      name="keywords"
-      content="doc,docs,documentation,gitbook,creator,generator,github,jekyll,github-pages"
-    />
-    <meta name="description" content="A magical documentation generator." />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
-    />
-    <link
-      rel="stylesheet"
-      href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css"
-      title="vue"
-    />
-    <link
-      rel="stylesheet"
-      href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/dark.css"
-      title="dark"
-      disabled
-    />
-    <link
-      rel="stylesheet"
-      href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/buble.css"
-      title="buble"
-      disabled
-    />
-    <link
-      rel="stylesheet"
-      href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/pure.css"
-      title="pure"
-      disabled
-    />
-    <style>
-      nav.app-nav li ul {
-        min-width: 100px;
-      }
+<!doctype html>
+<html>
+<head>
 
-      #carbonads {
-        box-shadow: none !important;
-        width: auto !important;
-      }
-    </style>
-  </head>
+	<title>AI-TOD-v2</title>
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+	<link href="css/main.css" media="screen" rel="stylesheet" type="text/css"/>
+	<link href="css/index.css" media="screen" rel="stylesheet" type="text/css"/>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:400,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,600,700' rel='stylesheet' type='text/css'>
+	<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({
+			CommonHTML: { linebreaks: { automatic: true } },
+			"HTML-CSS": { linebreaks: { automatic: true } },
+				 SVG: { linebreaks: { automatic: true } }
+			});
+	</script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+	
+</head>
 
-  <body>
-    <div id="app">Loading ...</div>
-    <script src="//cdn.jsdelivr.net/npm/docsify-plugin-carbon@1/index.js"></script>
-    <script>
-      // Set html "lang" attribute based on URL
-      var lang = location.hash.match(/#\/(de-de|es|ru-ru|zh-cn)\//);
+<body>
 
-      if (lang) {
-        document.documentElement.setAttribute('lang', lang[1]);
-      }
+<div class="menu-container noselect">
+	<div class="menu">
+		<table class="menu-table">
+			<tr>
+				<td>
+					<div class="logo">
+						<a href="javascript:void(0)">AI-TOD-v2</a>
+					</div>
+				</td>
+				<td>
+					<div class="menu-items">
+						<a class="menu-highlight">Overview</a>
+						<a href="https://github.com/Chasel-Tsui/Detecting-Tiny-Objects-in-Aerial-Images">GitHub</a>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
 
-      // Docsify configuration
-      window.$docsify = {
-        alias: {
-          '.*?/awesome':
-            'https://raw.githubusercontent.com/docsifyjs/awesome-docsify/master/README.md',
-          '.*?/changelog':
-            'https://raw.githubusercontent.com/docsifyjs/docsify/master/CHANGELOG.md',
-          '/.*/_navbar.md': '/_navbar.md',
-          '/es/(.*)':
-            'https://raw.githubusercontent.com/docsifyjs/docs-es/master/$1',
-          '/de-de/(.*)':
-            'https://raw.githubusercontent.com/docsifyjs/docs-de/master/$1',
-          '/ru-ru/(.*)':
-            'https://raw.githubusercontent.com/docsifyjs/docs-ru/master/$1',
-          '/zh-cn/(.*)':
-            'https://cdn.jsdelivr.net/gh/docsifyjs/docs-zh@master/$1',
-        },
-        auto2top: true,
-        coverpage: true,
-        executeScript: true,
-        loadSidebar: false,
-        loadNavbar: true,
-        mergeNavbar: true,
-        maxLevel: 4,
-        subMaxLevel: 2,
-        ga: 'UA-106147152-1',
-        matomo: {
-          host: '//matomo.thunderwave.de',
-          id: 6,
-        },
-        name: 'docsify',
-        search: {
-          noData: {
-            '/es/': '¡No hay resultados!',
-            '/de-de/': 'Keine Ergebnisse!',
-            '/ru-ru/': 'Никаких результатов!',
-            '/zh-cn/': '没有结果!',
-            '/': 'No results!',
-          },
-          paths: 'auto',
-          placeholder: {
-            '/es/': 'Buscar',
-            '/de-de/': 'Suche',
-            '/ru-ru/': 'Поиск',
-            '/zh-cn/': '搜索',
-            '/': 'Search',
-          },
-        },
-        vueComponents: {
-          'button-counter': {
-            template:
-              '<button @click="count += 1">You clicked me {{ count }} times</button>',
-            data: function() {
-              return {
-                count: 0,
-              };
-            },
-          },
-        },
-        vueGlobalOptions: {
-          data: function() {
-            return {
-              count: 0,
-              message: 'Hello, World!',
-              // Fake API response
-              images: [
-                { title: 'Image 1', url: 'https://picsum.photos/150?random=1' },
-                { title: 'Image 2', url: 'https://picsum.photos/150?random=2' },
-                { title: 'Image 3', url: 'https://picsum.photos/150?random=3' },
-              ],
-            };
-          },
-          computed: {
-            timeOfDay: function() {
-              const date = new Date();
-              const hours = date.getHours();
+<div class="content-container">
+	<div class="content">
+		<table class="content-table">
+		      <h1 style="text-align:center; margin-top:60px; font-weight: bold; font-size: 35px;">
+				Detecting Tiny Objects in Aerial Images</h1>
+	        
+				<p style="text-align:center; margin-bottom:15px; margin-top:20px; font-size: 18px;">
+					<a href="https://github.com/Chasel-Tsui" style="color: #0088CC">Chang Xu<script type="math/tex">^1</script>, </a>
+					<a href="https://github.com/jwwangchn" style="color: #0088CC">Jinwang Wang<script type="math/tex">^1</script>, </a>
+					<a href="http://eis.whu.edu.cn/ryDetail.shtml?rsh=00200590" style="color: #0088CC">Wen Yang<script type="math/tex">^{1,*}</script>, </a>
+          <a href="http://eis.whu.edu.cn/ryDetail.shtml?rsh=00033885" style="color: #0088CC">Huai Yu<script type="math/tex">^1</script>,</a>
+          <a href="http://eis.whu.edu.cn/ryDetail.shtml?rsh=00030713" style="color: #0088CC">Lei Yu<script type="math/tex">^1</script>,</a> 
+					<a href="http://captain.whu.edu.cn/xia_En.html" style="color: #0088CC">Gui-Song Xia<script type="math/tex">^{2}</script>, </a> <br>
+					<!-- <a href="http://www.dsi.unive.it/~pelillo/" style="color: #0088CC">Marcello Pelillo<script type="math/tex">^3</script></a> <br> -->
+                     
+					<a target="_blank" href="https://dsp.whu.edu.cn/" style="color: #0088CC; font-style: italic"><script type="math/tex">^1</script>EIS SPL, Wuhan University, Wuhan, China</a><br>
+					<a target="_blank" href="http://captain.whu.edu.cn/" style="color: #0088CC; font-style: italic"><script type="math/tex">^2</script>LIESMARS CAPTAIN, Wuhan University, Wuhan, China</a>  <br>
 
-              if (hours < 12) {
-                return 'morning';
-              } else if (hours < 18) {
-                return 'afternoon';
-              } else {
-                return 'evening';
-              }
-            },
-          },
-          methods: {
-            hello: function() {
-              alert(this.message);
-            },
-          },
-        },
-        vueMounts: {
-          '#counter': {
-            data: function() {
-              return {
-                count: 0,
-              };
-            },
-          },
-        },
-        plugins: [
-          DocsifyCarbon.create('CEBI6KQE', 'docsifyjsorg'),
-          function(hook, vm) {
-            hook.beforeEach(function(html) {
-              if (/githubusercontent\.com/.test(vm.route.file)) {
-                url = vm.route.file
-                  .replace('raw.githubusercontent.com', 'github.com')
-                  .replace(/\/master/, '/blob/master');
-              } else if (/jsdelivr\.net/.test(vm.route.file)) {
-                url = vm.route.file
-                  .replace('cdn.jsdelivr.net/gh', 'github.com')
-                  .replace('@master', '/blob/master');
-              } else {
-                url =
-                  'https://github.com/docsifyjs/docsify/blob/master/docs/' +
-                  vm.route.file;
-              }
-              var editHtml = '[:memo: Edit Document](' + url + ')\n';
-              return (
-                editHtml +
-                html +
-                '\n\n----\n\n' +
-                '<a href="https://docsify.js.org" target="_blank" style="color: inherit; font-weight: normal; text-decoration: none;">Powered by docsify</a>'
-              );
-            }),
-              hook.afterEach(function(html) {
-                if (vm.route.path === '/') {
-                  return html;
-                }
-                return (
-                  html +
-                  '<br/> <i>Vercel</i> has given us a Pro account <br/> <a href="https://vercel.com/?utm_source=docsifyjsdocs" target="_blank"><img src="https://cdn.jsdelivr.net/gh/docsifyjs/docsify/docs/_media/vercel_logo.svg" alt="Vercel" width="100" height="64"></a>'
-                );
-              });
-          },
-        ],
-      };
-    </script>
-    <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-markdown.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-nginx.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
-    <script>
-      (function() {
-        function loadJS(src, attrs) {
-          document.write(
-            '<script src="' + src + '" ' + (attrs || '') + '><\/script>'
-          );
-        }
+				</p>	 
+				<p style="text-align:center; margin-bottom:15px; margin-top:20px; font-size: 18px;"> 
+					<a> The source code will be released soon!
+					</a>
+				</p>
+		
+			
+			<tr>
+				<!-- <td colspan="1"> -->
+					<h2 class="add-top-margin">Abstract</h2>
+					<hr>
+				<!-- </td> -->
+			</tr>
+			<tr>
+					<!-- <td colspan="1"> -->
 
-        // Public site only
-        if (/docsify/.test(location.host)) {
-          loadJS('//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/ga.min.js');
-          loadJS('//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/matomo.min.js');
-        }
-      })();
-    </script>
-    <script src="//cdn.jsdelivr.net/npm/vue@2/dist/vue.min.js"></script>
-    <!-- <script src="//cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script> -->
-  </body>
+				<p class="text" style="text-align:justify;">
+					Tiny object detection (TOD) in aerial images is a challenging task since a tiny object only contains a
+          few pixels. State-of-the-art object detectors do not provide satisfactory results on tiny objects due to
+          the lack of supervision from discriminative features. Our key observation is that the Intersection over
+          Union (IoU) metric and its extensions are very sensitive to location deviation of the tiny objects, thus
+          drastically deteriorating the quality of label assignment when used in anchor-based detectors. To this
+          end, we propose a new evaluation metric dubbed Normalized Wasserstein Distance (NWD) and a new
+          RanKing based Assigning (RKA) strategy for tiny object detection. The proposed NWD-RKA strategy
+          can be easily embedded into all kinds of anchor-based detector to replace the standard IoU threshold
+          based one, thereby greatly alleviating problems in label assignment and providing sufficient supervision
+          information for network training. Tested on four datasets, NWD-RKA can consistently improve tiny
+          object detection performance by a large margin. Besides, observing obvious noisy labels in the dataset
+          for Tiny Object Detection in Aerial Images (AI-TOD), we are motivated to meticulously relabel AI-TOD
+          and release AI-TOD-v2 and its corresponding benchmark. In AI-TOD-v2, the missing annotation and
+          location error problems are considerably alleviated, facilitating more reliable training and validation
+          processes. Embedding NWD-RKA into DetectoRS, the detection performance achieves 4.3 AP points
+          improvement over state-of-the-art competitors on AI-TOD-v2. Datasets, codes and more visualizations
+          are available at: https://github.com/Chasel-Tsui/Detecting-Tiny-Objects-in-Aerial-Images.
+				</p>
+					<!-- </td> -->
+			</tr>
+
+			<tr>
+				<!-- <td colspan="1"> -->
+					<h2 class="add-top-margin">Introduction</h2>
+					<hr>
+				<!-- </td> -->
+			</tr>
+
+			<tr>
+				<p class="text" style="text-align:justify;">
+					Tiny objects are ubiquitous in aerial images, meanwhile detecting tiny objects in aerial images has many application
+          scenarios, including vehicle detection, traffic condition monitoring
+          and maritime rescue. Even though object detection has
+          achieved significant progress thanks to the development of
+          deep neural networks, most of them are dedicated to detecting objects
+          of normal size. While tiny objects (less than 16*16 pixels
+          in the AI-TOD dataset) in aerial images often exhibit with extremely limited appearance information,
+          which poses great challenges in learning discriminative features, leading to enormous failure cases when detecting tiny objects. 
+          <br>
+          <br>
+          For tiny objects, IoU metric suffers from the problem of sensivity to location deviation, and it fails to reflect the positional relationship of two bounding boxes when they have no overlap or are mutually inclusive, thus leading to three drawbacks in label assignment: severe pos/neg sample imbalance for tiny objects, scale-sample imbalance and failure of sample-compensation. In addition, we observe obvious noisy labels in the dataset for Tiny Object Detection in Aerial Images (AI-TOD), where the problem of objects missed to be annotated is very obvious. And the label noise problem will greatly affect the training and validation of tiny object detectors.
+				</p>
+			</tr>
+
+			<tr>
+				<td>
+					<div>
+					<img class="center" src="images/compare.PNG" width="900" /> <br>
+					<p class="image-caption">
+						Figure 1. A comparison between AI-TOD and AI-TOD-v2. We choose four categories out of eight categories to illustrate the
+            improvement of annotations. Note that images in the first row are from AI-TOD and images in the second row are from AI-TOD-v2.
+					</p>				
+					</div>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+				<p class="text" style="text-align:justify;">
+					To address the aforementioned problems, we attempt to push forward the development of TOD in aerial images both from the aspect of method and data. Specifically, we propose a new metric dubbed Normalized Wasserstein Distance (NWD) and combine it with a customized RanKing-based training sample Assignment (RKA) strategy, simultaneously alleviating the above three drawbacks of IoU threshold based assignment. Moreover, we convene experts to meticulously relabel our preliminary TOD dataset AI-TOD and release AI-TOD-v2 along with its corrseponding benchmarks.
+					Our contributions are three-folds:
+					<ul style="font-weight:normal; text-align:justify;">
+							<li> We propose NWD-RKA as a better training sample assignment strategy for tiny objects, which can simultaneously alleviate the three drawbacks of IoU threshold based strategy (i.e., severe pos/neg sample imbalance for tiny objects, scale-sample imbalance and failure of sample-compensation. </li>
+							<li> We optimize AI-TOD and release AI-TOD-v2, where the label noise problem is greatly mitigated. Besides, we establish a comprehensive benchmark by several baseline detectors. The training/validation images and annotations will be made public. </li>
+							<li> Our proposed NWD-RKA can be applied to all kinds of anchor-based detectors and boost their performance on tiny objects. On AI-TOD-v2 dataset, we achieve the performance of 24.7% AP and 57.2% AP0.5, which is highly above the state-of-the-art competitors. Moreover, significant improvements can be seen on AI-TOD, VisDrone2019 and DOTA-v2.0 dataset.</li>							
+					</ul>
+
+				</p>
+				</td>
+			</tr>
+      <tr>
+				<td>
+						<h2 class="add-top-margin">AI-TOD-v2</h2>
+						<hr>
+				</td>
+			</tr>
+      <tr>
+        <td>
+            <h3 class="add-top-margin">Statistics</h3>
+            
+        </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div>
+        <img class="center" src="images/statistics.PNG" width="900" /> <br>
+        <p class="image-caption">
+          Figure 2. Some results of line segment detection of different approaches on the Wireframe dataset. From top to bottom: LSD [4], MCMLSD [3], Linelet [6], DWP [5], AFM [2] with the a-trous Residual U-Net and AFM++ proposed in this paper.
+        </p>				
+        </div>
+      </td>
+    </tr>
+
+
+			<tr>
+				<td>
+						<h2 class="add-top-margin">Experimental Results</h2>
+						<hr>
+				</td>
+			</tr>
+
+			<tr>
+					<td>
+							<h3 class="add-top-margin">Results on Wireframe Dataset</h3>
+							
+					</td>
+			</tr>
+					
+			<tr>
+				<td>
+					<div>
+					<img class="center" src="img/Results_on_wireframe.svg" width="900" /> <br>
+					<p class="image-caption">
+						Figure 2. Some results of line segment detection of different approaches on the Wireframe dataset. From top to bottom: LSD [4], MCMLSD [3], Linelet [6], DWP [5], AFM [2] with the a-trous Residual U-Net and AFM++ proposed in this paper.
+					</p>				
+					</div>
+				</td>
+			</tr>
+			<tr>
+					<td>
+							<h3 class="add-top-margin">Results on YorkUrban Dataset</h3>
+							
+					</td>
+				</tr>
+			<tr>
+				<td>
+					<div>
+					<img class="center" src="img/Results_on_yorkurban.svg" width="900" /> <br>
+					<p class="image-caption">
+							Figure 3. Some results of line segment detection of different approaches on the YorkUrban dataset. From top to bottom: LSD [4], MCMLSD [3], Linelet [6], DWP [5], AFM [2] with the a-trous Residual U-Net and AFM++ proposed in this paper.
+					</p>				
+					</div>
+				</td>
+			</tr>
+
+			<tr>
+					<td colspan="2">
+					<h2 class="add-top-margin">References</h2>
+					<hr>
+					<ol style="padding-inline-start:20px;">
+						<li>
+							<b>Learning Regional Attraction for Line Segment Detection </b>
+							[<a href="https://ieeexplore.ieee.org/document/8930083" style="color: #0088CC">paper</a>]<br>
+								N. Xue, S. Bai, F.-D. Wang, G.-S. Xia, T. Wu, L. Zhang, P.H.S. Torr <br>
+								IEEE Trans. on Pattern Analysis and Machine Intelligence (<b>TPAMI</b>), 2019.
+						</li>	
+						<li>
+							<b>Learning Attraction Field Representation for Robust Line Segment Detection </b>
+							[<a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Xue_Learning_Attraction_Field_Representation_for_Robust_Line_Segment_Detection_CVPR_2019_paper.pdf" style="color: #0088CC">paper</a>]<br>
+							   N. Xue, S. Bai, F.-D. Wang, G.-S. Xia, T. Wu, L. Zhang <br>
+							   IEEE Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>), 2019.
+						</li>	
+
+						<li>
+								<b>MCMLSD: A Dynamic Programming Approach to Line Segment Detection</b>
+								[<a href="https://ieeexplore.ieee.org/document/8100103" style="color: #0088CC">paper</a>]<br>
+								E. J. Almazan,  R. Tal,  Y. Qian, J. H. Elder<br>
+								IEEE Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>), 2017.
+						</li>	
+
+						<li>
+								<b>LSD: A Fast Line Segment Detector with a False Detection Control</b>
+								[<a href="https://ieeexplore.ieee.org/abstract/document/4731268" style="color: #0088CC">paper</a>]<br>
+								R. G. von Gioi, J. Jakubowicz, J. M. Morel, G. Randall <br>
+									IEEE Trans. on Pattern Analysis and Machine Intelligence (<b>TPAMI</b>), 2010.
+						</li>	
+
+						<li>
+							<b>Learning to Parse Wireframes in Images of Man-Made Environments</b>
+							[<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Huang_Learning_to_Parse_CVPR_2018_paper.pdf" style="color: #0088CC">paper</a>]<br>
+							K. Huang, Y. Wang, Z. Zhou, T. Ding, S. Gao, Y. Ma<br>
+							IEEE Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>), 2018.
+						</li>	
+
+
+						<li>
+								<b>A Novel Linelet-Based Representation for Line Segment Detection</b>
+								[<a href="https://ieeexplore.ieee.org/abstract/document/7926451" style="color: #0088CC">paper</a>]<br>
+								N.-G. Cho, A. Yuille, S.-W. Lee<br>
+									IEEE Trans. on Pattern Analysis and Machine Intelligence (<b>TPAMI</b>), 2018.
+							</li>	
+
+					</ol>
+					</td>
+				</tr>
+			<br><br>
+		 </table>
+		 			
+		
+	<div class="footer">
+		<p class="block">&copy; 2021 by Chang Xu at SPL</p>
+	</div>
+
+	</div>
+</div>
+</body>
 </html>
