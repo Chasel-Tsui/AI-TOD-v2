@@ -124,10 +124,9 @@
 			<tr>
 				<td>
 					<div>
-					<img class="center" src="images/compare.PNG" width="900" /> <br>
+					<img class="center" src="images/fps2.gif" width="900" /> <br>
 					<p class="image-caption">
-						Figure 1. A comparison between AI-TOD and AI-TOD-v2. We choose four categories out of eight categories to illustrate the
-            improvement of annotations. Note that images in the first row are from AI-TOD and images in the second row are from AI-TOD-v2.
+						Figure 1. A comparison between the AI-TOD and AI-TOD-v2. Note that the green boxes denote the same bounding boxes in the two versions, the yellow boxes denote the supplemented boxes while the red boxes denote deleted boxes.
 					</p>				
 					</div>
 				</td>
@@ -140,7 +139,7 @@
 					Our contributions are three-folds:
 					<ul style="font-weight:normal; text-align:justify;">
 							<li> We propose NWD-RKA as a better training sample assignment strategy for tiny objects, which can simultaneously alleviate the three drawbacks of IoU threshold based strategy (i.e., severe pos/neg sample imbalance for tiny objects, scale-sample imbalance and failure of sample-compensation). </li>
-							<li> We optimize AI-TOD and release AI-TOD-v2, where the label noise problem is greatly mitigated. Besides, we establish a comprehensive benchmark by several baseline detectors. The training/validation images and annotations will be made public. </li>
+							<li> We carefully relabel AI-TOD and release AI-TOD-v2, where the label noise problem is greatly mitigated. Besides, we establish a comprehensive benchmark by several baseline detectors. The training/validation images and annotations will be made public. </li>
 							<li> Our proposed NWD-RKA can be applied to all kinds of anchor-based detectors and boost their performance on tiny objects. On AI-TOD-v2 dataset, we achieve the performance of 24.7% AP and 57.2% AP0.5, which is highly above the state-of-the-art competitors. Moreover, significant improvements can be seen on AI-TOD, VisDrone2019 [2] and DOTA-v2.0 [3] dataset.</li>							
 					</ul>
 
